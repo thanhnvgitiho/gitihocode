@@ -1,0 +1,142 @@
+<div class="custom-html-value" style="position: relative">
+<style> 
+#webform {
+	background: #FFFFFF;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+	padding: 25px;
+}
+
+.form-body .head-form{
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 36px;
+}
+
+.form-body .content-form {
+  	margin-top: 10px;
+  	color: #444444;
+}
+
+.form-body .content-form span{
+	font-size: 16px;
+}
+
+.form-body .content-form input {
+  min-height: 28px;
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid #C4C4C4;
+  margin-bottom: 7px;
+  background: #fff;
+  webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.form-body .content-form input:focus{
+	border-bottom: 1px solid #F06923;
+}
+
+::-webkit-input-placeholder { 
+	color: #C4C4C4;
+}
+
+:-ms-input-placeholder {
+	color: #C4C4C4;
+}
+
+::placeholder {
+ 	color: #C4C4C4;
+}
+
+input,button {
+  outline: none;
+}
+
+.button-submit {
+  display: inline-block;
+  background: #F06923;
+  color: white;
+	margin-top: 40px;
+  border: 3px solid #F06923;
+  width: 100%;
+  border-radius: 30px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.button-submit:hover {
+  background: #cc581c;
+  border-color: #cc581c;
+  color: white;
+} 
+
+</style>
+<form id="webform" method="POST" action="https://mywork.gitiho.com/webform" name="Event">
+<input type="hidden" name="public_token" value="X0Qr3VaFTT6G9wbh49NjdtSoccGVedqO">
+<input type="hidden" name="form_name" value="Event">
+<input type="hidden" name="landing_page" value="">
+<input type="hidden" name="course_ids" value="120, 99, 123">
+<input type="hidden" name="combo_course_ids" value="120, 99, 123">
+<input type="hidden" name="origin_price" value="1499000">
+<input type="hidden" name="price" value="699000">
+<input type="hidden" name="combo_name" value="Chương trình tri ân khách hàng thân thiết của Gitiho">
+<input type="hidden" name="utm_source" value="">
+<input type="hidden" name="utm_campaign" value="">
+<input type="hidden" name="utm_medium" value="">
+<input type="hidden" name="utm_content" value="">
+<input type="hidden" name="utm_tern" value="">
+	<div class="form-body">
+		
+		<span class="head-form">Đăng ký ngay</span>
+	
+		<div class="content-form">
+			<span>Tên</span>
+			<input type="text" class="input-group" name="name" value="" required="" placeholder="Họ và tên">
+		</div>
+		<div class="content-form">
+			<span>Số điện thoại</span>
+			<input type="text" class="input-group" name="phone" value="" pattern="((\+?)[0-9]{10,})\b" required="" placeholder="Điện thoại">
+		</div>
+		<div class="content-form">
+			<span>Email</span>
+			<input type="email" class="input-group" name="email" value="" required="" placeholder="Email">
+		</div>
+		<div class="content-form">
+			<span>Địa chỉ</span>
+			<input type="text" class="input-group" name="address" value="" required="" placeholder="Địa chỉ của bạn">
+		</div>
+	</div>
+	<button type="submit" class="button-submit">Đăng ký</button>
+</form>
+
+<script>
+var url_string = window.location.href; var url = new URL(url_string);
+var landing_page  = document.getElementsByName("landing_page")[0];
+landing_page.value=url_string;
+var param_utm_source=url.searchParams.get("utm_source"); var utm_source = document.getElementsByName("utm_source")[0];
+utm_source.value = param_utm_source;
+var param_utm_campaign=url.searchParams.get("utm_campaign"); var utm_campaign = document.getElementsByName("utm_campaign")[0];
+utm_campaign.value = param_utm_campaign;
+var param_utm_medium=url.searchParams.get("utm_medium"); var utm_medium = document.getElementsByName("utm_medium")[0];
+utm_medium.value = param_utm_medium;
+var param_utm_content=url.searchParams.get("utm_content"); var utm_content = document.getElementsByName("utm_content")[0];
+utm_content.value = param_utm_content;
+var param_utm_tern=url.searchParams.get("utm_tern"); var utm_tern = document.getElementsByName("utm_tern")[0];
+utm_tern.value = param_utm_tern;
+
+</script></div>
