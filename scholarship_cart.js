@@ -1,4 +1,4 @@
-document.write('<style>html{scroll-behavior: smooth;}.add-to-cart{cursor: pointer;}#sticked_cart{z-index: 999999; background: white; width: 167px; position: fixed; right: 20px; bottom: 45%; box-shadow: 1px 2px 8px rgba(89, 67, 67, 0.64); border-radius: 5px;}#sticked_cart .cart-header{display: flex; padding: 3px 10px; border-bottom: solid thin #C83B4C;}#sticked_cart .cart-title{display: block; line-height: 19px; margin-left: 10px; color: #C83B4C; font-size: 14px; font-weight: bold;}#sticked_cart .cart-body{padding: 10px; font-size: 14px;}#scrollToSubmit{background: #C83B4C; color: white; font-weight: bold; text-align: center; text-transform: uppercase; padding: 6px; border-radius: 6px; margin-top: 10px; cursor: pointer; transition: .3s;}#scrollToSubmit:hover{background: #bb2335}.my-button.selected{background: #8BC34A!important;}@media(max-width: 768px){#sticked_cart{bottom: 3%!important;}}</style><div id="sticked_cart"> <div class="cart-header"> <img src="https://i.imgur.com/HEouTLh.png" style="width: 19px"> <span class="cart-title">Giá» hĂ ng</span> </div><div class="cart-body"> <p style="margin-bottom: 10px">ÄĂ£ chá»n: <strong id="numOfCart" style="color: #C83B4C">0</strong></p><p>Tá»•ng: <strong id="sumCartPrice" style="color: #C83B4C">0</strong></p><div id="scrollToSubmit" >Thanh toĂ¡n</div></div></div>');
+document.write('<style>html{scroll-behavior: smooth;}.add-to-cart{cursor: pointer;}#sticked_cart{z-index: 999999; background: white; width: 167px; position: fixed; right: 20px; bottom: 45%; box-shadow: 1px 2px 8px rgba(89, 67, 67, 0.64); border-radius: 5px;}#sticked_cart .cart-header{display: flex; padding: 3px 10px; border-bottom: solid thin #C83B4C;}#sticked_cart .cart-title{display: block; line-height: 19px; margin-left: 10px; color: #C83B4C; font-size: 14px; font-weight: bold;}#sticked_cart .cart-body{padding: 10px; font-size: 14px;}#scrollToSubmit{background: #C83B4C; color: white; font-weight: bold; text-align: center; text-transform: uppercase; padding: 6px; border-radius: 6px; margin-top: 10px; cursor: pointer; transition: .3s;}#scrollToSubmit:hover{background: #bb2335}.my-button.selected{background: #8BC34A!important;}@media(max-width: 768px){#sticked_cart{bottom: 3%!important;}}</style><div id="sticked_cart"> <div class="cart-header"> <img src="https://i.imgur.com/HEouTLh.png" style="width: 19px"> <span class="cart-title">Giỏ học bổng</span> </div><div class="cart-body"> <p style="margin-bottom: 10px">Đã chọn: <strong id="numOfCart" style="color: #C83B4C">0</strong></p><p>Tá»•ng: <strong id="sumCartPrice" style="color: #C83B4C">0</strong></p><div id="scrollToSubmit" >Gửi thông tin học bổng</div></div></div>');
 var course = JSON.parse(courseJson);
 
 var combo = 0;
@@ -47,17 +47,17 @@ function clickToCart(course_id, el) {
                     for (let h in cart_items) {
                         if($('.cart_'+h+'_'+k).length > 0){
                             $('.cart_'+h+'_'+k).removeClass('selected');
-                            $('.cart_'+h+'_'+k).html('ThĂªm vĂ o giá» hĂ ng');
+                            $('.cart_'+h+'_'+k).html('Thêm vào giỏ hàng');
                         }
 
                         if($('.cart_'+k+'_'+h).length > 0){
                             $('.cart_'+k+'_'+h).removeClass('selected');
-                            $('.cart_'+k+'_'+h).html('ThĂªm vĂ o giá» hĂ ng');
+                            $('.cart_'+k+'_'+h).html('Thêm vào giỏ hàng');
                         }
                     }
 
                     $('.cart_'+k).removeClass('selected');
-                    $('.cart_'+k).html('ThĂªm vĂ o giá» hĂ ng');
+                    $('.cart_'+k).html('Thêm vào giỏ hàng');
                 }
             }
         }
@@ -68,12 +68,12 @@ function clickToCart(course_id, el) {
         for (let h in getCart()) {
             if($('.cart_'+h+'_'+k).length > 0){
                 $('.cart_'+h+'_'+k).addClass('selected');
-                $('.cart_'+h+'_'+k).html('ÄĂ£ chá»n');
+                $('.cart_'+h+'_'+k).html('Đã chọn');
             }
 
             if($('.cart_'+k+'_'+h).length > 0){
                 $('.cart_'+k+'_'+h).addClass('selected');
-                $('.cart_'+k+'_'+h).html('ÄĂ£ chá»n');
+                $('.cart_'+k+'_'+h).html('Đã chọn');
             }
         }
     }
@@ -90,7 +90,7 @@ function addToCart2(course_item,cart_items){
         };
 
         $('.cart_'+course_item.id).addClass('selected');
-        $('.cart_'+course_item.id).html('ÄĂ£ chá»n');
+        $('.cart_'+course_item.id).html('Đã chọn');
     } else {
         console.log(sessionStorage.getItem("Sorry, your browser does not support Web Storage..."));
     }
@@ -108,10 +108,10 @@ function addToCart(course_item, sender) {
                 origin_price: course_item.origin_price
             };
             sender.addClass('selected');
-            sender.html('ÄĂ£ chá»n');
+            sender.html('Đã chọn');
 
             $('.cart_'+course_item.id).addClass('selected');
-            $('.cart_'+course_item.id).html('ÄĂ£ chá»n');
+            $('.cart_'+course_item.id).html('Đã chọn');
         } else {
             if (!cart_items.hasOwnProperty(course_item.id)) {
                 cart_items[course_item.id] = {
@@ -121,9 +121,9 @@ function addToCart(course_item, sender) {
                     origin_price: course_item.origin_price
                 };
                 sender.addClass('selected');
-                sender.html('ÄĂ£ chá»n');
+                sender.html('Đã chọn');
                 $('.cart_'+course_item.id).addClass('selected');
-                $('.cart_'+course_item.id).html('ÄĂ£ chá»n');
+                $('.cart_'+course_item.id).html('Đã chọn');
             } else {
                 console.log(course_item);
                 for (let k in cart_items) {
@@ -133,10 +133,10 @@ function addToCart(course_item, sender) {
                 }
                 updateCart(cart_items);
                 sender.removeClass('selected');
-                sender.html('ThĂªm vĂ o giá» hĂ ng');
+                sender.html('Thêm vào giỏ hàng');
 
                 $('.cart_'+course_item.id).removeClass('selected');
-                $('.cart_'+course_item.id).html('ThĂªm vĂ o giá» hĂ ng');
+                $('.cart_'+course_item.id).html('Thêm vào giỏ hàng');
                 console.log('course exited on cart');
             }
         }
